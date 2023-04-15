@@ -1,0 +1,141 @@
+
+.body {
+    padding: 0;
+    margin-top: 20vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.ule {
+    position: relative;
+    display: flex;
+  }
+  
+  .lie {
+    list-style: none;
+  }
+  
+ 
+  
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    z-index: 100;
+    margin: -2vh;
+  }
+  
+  .err {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin:2vh;
+    background: #18191f;
+    color: #555;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+      4px 4px 6px rgba(0, 0, 0, 0.2),
+      inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+      inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* div:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 75px;
+    height: 38px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+  } */
+  
+  input[type="checkbox"]:checked ~ div {
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+      inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    color: yellow;
+    text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+    animation: glow 1.5s linear infinite;
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+
+
+
+.contens{
+    margin-left: 6vh;
+    padding: 10vh;
+}
+  .spinner {
+    width: 60px;
+    height: 60px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+   }
+   
+   .spinner > div {
+    background-color: rgba(9, 255, 0, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #000000;
+   }
+   
+   .spinner div:nth-of-type(1) {
+    transform: translateZ(-30px) rotateY(180deg);
+   }
+   
+   .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+   }
+   
+   .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+   }
+   
+   .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+   }
+   
+   .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+   }
+   
+   .spinner div:nth-of-type(6) {
+    transform: translateZ(30px);
+   }
+   
+   @keyframes spinner-y0fdc1 {
+    0% {
+     transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+   
+    50% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+   
+    100% {
+     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+   }
