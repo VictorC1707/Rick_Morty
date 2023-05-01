@@ -20,8 +20,8 @@ const Favorites = (props) => {
             <option selected disabled>
 									Choose order
 			</option>
-            <option value='Ascendente'>Ascendente</option>
-            <option value='Descendente'>Descendente</option>
+            <option value='Ascendente'>Ascending</option>
+            <option value='Descendente'>Descending</option>
         </select>
         <select name='' onChange={handleOrderFilter}>
             <option selected disabled>
@@ -30,7 +30,7 @@ const Favorites = (props) => {
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
             <option value='Genderless'>Genderless</option>
-            <option value='unknown'>unknown</option>
+            <option value='unknown'>Unknown</option>
         </select>
     </div>
         <Cards characters= {props.myFavorites}></Cards>
