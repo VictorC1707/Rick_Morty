@@ -1,0 +1,29 @@
+.search-container {
+    float: right;
+    
+  }
+  
+  input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .search-container button {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: rgba(100,200,30,0.6);
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: all 1s ease-in;
+  }
+  
+  .search-container button:hover {
+    background-color: rgba(0,0,0,0.5);
+  color: white;
+  }
+  
