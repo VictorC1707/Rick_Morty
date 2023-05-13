@@ -1,4 +1,5 @@
 let http = require("http")
+let getCharById = require("/controllers/getCharById")
 
 const server = http.createServer((req,res)=>{
    res.setHeader('Access-Control-Allow-Origin', '*') 
@@ -11,6 +12,10 @@ const server = http.createServer((req,res)=>{
     res.writeHead(200,{'Content-Type': 'application/json'})
     res.end(user)
 
+   }
+
+   if(req.url.includes("/rickandmorty/character")){
+    getCharById(res,req.url.id)
    }
 })
 
